@@ -1,0 +1,15 @@
+
+{% extends 'demoapp/base.html' %}
+
+
+{% block body %}
+
+    <form action="" method = 'POST'>{% csrf_token %}
+            <h3> Do you want to delete student "{{object.name}}"</h3>
+           <p> <input type="submit" value = 'Yes'> <a href="{% url 'student_detail' object.pk %}"> cancel </a> </p>
+
+    </form>
+
+{% endblock %}  
+
+

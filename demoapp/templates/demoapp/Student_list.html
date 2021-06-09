@@ -1,0 +1,20 @@
+
+{% extends 'demoapp/base.html' %}
+
+
+{% block body %}
+
+    <ol>
+        {% for x in data %}
+            <h4> <li>  <a href="{% url 'student_detail' x.pk %}"> {{x.name}} </a>  </li> </h4>
+            <hr>
+        {% endfor %}
+    </ol>
+    
+
+    <hr> <br>
+
+    
+    <center>  <a href="{% url 'student_create' %}"> +Create Student </a>  </center>
+    
+{% endblock %}  
