@@ -31,7 +31,7 @@ class BasePageView(TemplateView):
 class StudentListView(ListView):
     model               = Student # optional we can use model or queryset
     #queryset           = Student.objects.all() 
-    #template_name      = 'demoapp/read.html' # optional : default value :-> <app_name>/<modelname>_list.html
+    template_name      = 'demoapp/read.html' # optional : default value :-> <app_name>/<modelname>_list.html
     context_object_name = 'data' # default value :-> object_list
 
 
